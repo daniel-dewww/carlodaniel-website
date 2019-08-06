@@ -1,0 +1,100 @@
+:root {
+      /* Colors */
+      --foreground-default: #1D1D1B;
+      --foreground-primary: #03FF8C;
+      --foreground-secondary: #41474d;
+      --foreground-tertiary: #797c80;
+      --foreground-quaternary: #f4faff;
+      --foreground-light: #41474d;
+
+    
+      --background-default: #f4faff;
+      --background-secondary: #a3b9cc;
+      --background-tertiary: #5c7d99;
+      --background-light: #ffffff;
+    
+      --primary-default: #5dfdcb;
+      --primary-dark: #24b286;
+      --primary-light: #b2ffe7;
+    
+      --error-default: #ef3e36;
+      --error-dark: #800600;
+      --error-light: #ffcecc;
+      --image: url(https://firebasestorage.googleapis.com/v0/b/portafolio-e251f.appspot.com/o/logotipo.png?alt=media&token=7f34b24e-6a5e-4bf8-96a9-3f0f7cfa3c42);
+      /* Shadows */
+      --background-tertiary-shadow: 0 1px 3px 0 rgba(92, 125, 153, 0.5);
+
+      /*TYPOGRAPHY*/
+      --tipografia: "Lucida Bright";
+    }
+/*--------------- basic styling --------------- */
+ body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Lucida Bright" !important;
+      background:var(--background-light) !important;
+  
+      color: var(--foreground-default) !important;
+}
+
+
+.whitespace {
+      width: 100%;
+      height: 100px;
+}
+
+@media(max-width: 768px) {
+      .whitespace {
+            display: none;
+      }
+}
+
+/*--------------- typewriter effect --------------- */
+.line {
+      width: 24em;
+      top: 50%;
+      margin: auto;
+      border-right: 2px solid var(--foreground-default);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+}
+
+.anim-typewriter {
+      animation: typewriter 4s steps(40) 1s 1 normal both,
+      blinkTextCussor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+      from {
+            width: 0;
+      }
+      to {
+            width: 18em;
+      }
+}
+
+@media(max-width: 768px) {
+      @keyframes typewriter {
+            from {
+                  width: 0;
+            }
+            to {
+                  width: 17em;
+            }
+      }
+}
+
+@keyframes blinkTextCussor {
+      from {
+            border-right-color: var(--foreground-default);
+      }
+      to {
+            border-right-color: transparent;
+      }
+}
+
+
